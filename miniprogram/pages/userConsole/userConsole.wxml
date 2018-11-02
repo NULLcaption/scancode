@@ -1,0 +1,31 @@
+<!--pages/userConsole/userConsole.wxml-->
+<scroll-view style='heigth:100vh'>
+  <!-- 已参加活动列表 -->
+  <scroll-view scroll-y class='list'>
+    <view class='item'>
+      <view class='content'>
+        <image src='/images/birthday.png'></image>
+        <view class='text'>
+          <view class='title'>成都兰芳园高校\写字楼10月品牌活动</view>
+          <view class='spec'>四川省成都市武侯区一环路南一段24号 四川大学(望江校区)</view>
+          <view class='price'>
+            <text>已参加</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='content'>
+        <image src='/images/birthday.png'></image>
+        <view class='text'>
+          <view class='title'>成都兰芳园高校\写字楼10月品牌活动</view>
+          <view class='spec'>四川省成都市武侯区一环路南一段24号 四川大学(望江校区)</view>
+          <view class='price'>
+            <text>已参加</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</scroll-view >

@@ -1,0 +1,66 @@
+<!--pages/chooseLib/chooseLib.wxml-->
+<view style='height:100vh;'>
+  <scroll-view scroll-y>
+    <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}"
+        >
+          <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src='{{item}}' style='height:60vh;' />
+            </swiper-item>
+          </block>
+    </swiper>
+    <view class='title'>
+      成都兰芳园高校\写字楼10月品牌活动
+      <view class='spec'>
+        四川省成都市武侯区一环路南一段24号 四川大学(望江校区)
+      </view>
+    </view>
+    <view class='price'>
+      <text>活动起止时间：</text>
+      2018年11月01日至2018年11月30日
+    </view>
+    <view class='freight'>
+      <view class='left'>
+        活动类型：现场派发
+      </view>
+      <view class='right'>
+        已参加人数：3424
+      </view>
+    </view>
+    <view class='tab'>
+      <view class='left' bindtap="tabFun" data-state="{{1}}">
+        <text class='{{tabIs?"tab-acitve":""}}'>活动说明</text>
+      </view>
+      <view class='right' bindtap="tabFun" data-state="{{2}}">
+        <text class='{{!tabIs?"tab-acitve":""}}'>领取方式</text>
+      </view>
+    </view>
+    <view class='content'  wx:if="{{tabIs}}">
+      1、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+      2、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+      3、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+      4、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+    </view>
+    <view class='content' wx:if="{{!tabIs}}">
+      1、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+      2、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+      3、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+      4、结合区域势能门店打造，规范门店陈列及形象建，彰显产品势能，提升经营绩效；
+    </view>
+    
+    <view class='tab'>
+      <view class='right' >
+        <text class='tab-acitve'>领取凭证</text>
+      </view>
+    </view>
+    <view class='content'>
+      <!-- <image class='img' src='/images/QRCode.jpg'></image> -->
+      <canvas class='canvas' canvas-id='canvas' bindlongtap='save'></canvas>
+    </view>
+  </scroll-view>
+</view>
+
